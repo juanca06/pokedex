@@ -45,29 +45,37 @@ useEffect(() => {
 
     return(
         <>
-            <div className="container">
-                <div className="left-content">
+        <center>
+        
+  
+        <img src="./images/logo.png" alt="" width={200} height={100} className="p-3"/>
+        </center>
+            <div className="container  p-3 mt-4 text-center"  id="contenedor">
+                
+                <div className="left-content " >
                     <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setpokeDex(poke)} /> 
                 
                     
-                    <div className="btn-group">
-                        { prevUrl && <button onClick={()=>{
+                    <div className="btn-group" >
+                        { prevUrl && <button type="button" className="btn btn-outline-info" onClick={()=>{
                             setPokeData([])
                             setUrl(prevUrl)
                         }}>Aterior</button>}
 
-                        { nextUrl && <button onClick={()=>{
+                        { nextUrl && <button type="button" className="btn btn-outline-info" onClick={()=>{
                             setPokeData([])
                             setUrl(nextUrl)
                         }}>Siguiente</button>}
 
                     </div>
                 </div>
+                
 
                 <div className="right-content">
                     <Pokeinfo data={pokeDex}/>
 
                 </div>
+                
             </div>
 
         </>
